@@ -15,6 +15,7 @@ public class GameManager {
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.print("Hi Player 1, please insert the number of players for the game: ");
 			int n = scanner.nextInt();
+			System.out.println("Good, have a nice game!");
 			scanner.nextLine();
 		    for (int i = 0; i < n; i++) {
 		    	// per tenere traccia dei valori già usciti per ogni giocatore
@@ -57,6 +58,7 @@ public class GameManager {
 		        for (int j = 0; j < persons.get(i).num; j++) {
 		            boolean ris = persons.get(i).cards.get(j).checkCard(values);
 		            if (ris) {
+		            	System.out.println();
 		                System.out.println(persons.get(i).getName() + " won!");
 		                gameWon = true; // Imposta la variabile gameWon a true per terminare il ciclo
 		                break;
