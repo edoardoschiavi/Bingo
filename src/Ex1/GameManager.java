@@ -60,12 +60,12 @@ public class GameManager {
 		            if (ris) {
 		            	System.out.println();
 		                System.out.println(persons.get(i).getName() + " won!");
-		                gameWon = true; // Imposta la variabile gameWon a true per terminare il ciclo
+		                gameWon = true;
 		                break;
 		            }
 		        }
 		        if (gameWon) {
-		            break; // Se un giocatore ha vinto, esci dal ciclo esterno anche
+		            break;
 		        }
 		    }
 		}
