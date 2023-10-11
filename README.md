@@ -1,2 +1,2 @@
-# Bingo
-# version simplified without list in Card
+# Exercise realized for a training course
+# Bingo simplified without list in Card
