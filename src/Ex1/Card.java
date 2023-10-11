@@ -7,7 +7,7 @@ public class Card {
 	private final static int  ROW = 3;
 	private final static int  COL = 5;
 	
-	public int[][] card = new int[ROW][COL];
+	private int[][] card = new int[ROW][COL];
 	
 	public Card() {
 		

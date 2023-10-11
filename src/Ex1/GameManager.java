@@ -7,8 +7,8 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class GameManager {
-	public List<Person> persons = new ArrayList<Person>();
-	public Set<Integer> values = new HashSet<Integer>(); // per tenere traccia dei valori estratti dal banco
+	private List<Person> persons = new ArrayList<Person>();
+	private Set<Integer> values = new HashSet<Integer>(); // per tenere traccia dei valori estratti dal banco
 
 	public void Play() {
 		// inizializzo i giocatori e le carte

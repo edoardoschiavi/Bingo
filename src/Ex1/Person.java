@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class Person {
 	private String name;
-	public int num;
+	protected int num;
 	protected List<Card> cards = new ArrayList<Card>();
 	
 	public Person(String name, int num, Set<Integer> set) {
