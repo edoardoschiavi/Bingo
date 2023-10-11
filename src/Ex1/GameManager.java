@@ -47,7 +47,7 @@ public class GameManager {
 		
 		boolean gameWon = false;
 
-		while (!gameWon) {
+		while(!gameWon) {
 		    int number;
 		    do {
 		        number = (int) (Math.random() * 90) + 1;
@@ -55,10 +55,10 @@ public class GameManager {
 		    
 		    System.out.println("Numero estratto: " + number);
 		   
-		    for (int i = 0; i < persons.size(); i++) {
-		        for (int j = 0; j < persons.get(i).num; j++) {
+		    for(int i = 0; i < persons.size(); i++) {
+		        for(int j = 0; j < persons.get(i).num; j++) {
 		            winnerRow = persons.get(i).cards.get(j).checkCard(values);
-		            if (winnerRow != -1) {
+		            if(winnerRow != -1) {
 		            	System.out.println();
 		                System.out.println("CARTELLA VINCENTE DI " + persons.get(i).getName() +
 		                		" RIGA " + winnerRow);
@@ -66,7 +66,7 @@ public class GameManager {
 		                break;
 		            }
 		        }
-		        if (gameWon) {
+		        if(gameWon) {
 		            break;
 		        }
 		    }
