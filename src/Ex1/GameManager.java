@@ -9,7 +9,8 @@ import java.util.Set;
 public class GameManager {
 	private List<Person> persons = new ArrayList<Person>();
 	private Set<Integer> values = new HashSet<Integer>(); // per tenere traccia dei valori estratti dal banco
-
+	protected int winnerRow = -1;
+	
 	public void Play() {
 		// inizializzo i giocatori e le carte
 		try (Scanner scanner = new Scanner(System.in)) {
@@ -56,10 +57,11 @@ public class GameManager {
 		   
 		    for (int i = 0; i < persons.size(); i++) {
 		        for (int j = 0; j < persons.get(i).num; j++) {
-		            boolean ris = persons.get(i).cards.get(j).checkCard(values);
-		            if (ris) {
+		            winnerRow = persons.get(i).cards.get(j).checkCard(values);
+		            if (winnerRow != -1) {
 		            	System.out.println();
-		                System.out.println(persons.get(i).getName() + " won!");
+		                System.out.println("CARTELLA VINCENTE DI " + persons.get(i).getName() +
+		                		" RIGA " + winnerRow);
 		                gameWon = true;
 		                break;
 		            }

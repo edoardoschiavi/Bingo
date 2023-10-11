@@ -54,22 +54,22 @@ public class Card {
 		}
 	}
 	
-	public boolean checkCard(Set<Integer> valuesExtracted) {
-		boolean ris = false;
+	public int checkCard(Set<Integer> valuesExtracted) {
+		int ris = 0;
 		for(int i = 0; i < ROW; i ++) {
 			for(int j = 0; j < COL; j ++) {
 				if(!valuesExtracted.contains(card[i][j]))
 					break;
 				else {
 					if(j == COL - 1)
-						ris = true;
+						ris = i + 1;
 				}
 			}
-			if(ris)
-				return true;
+			if(ris != 0)
+				return ris;
 		}
 
-		return false;
+		return -1;
 		
 	}
 }
